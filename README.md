@@ -1,8 +1,3 @@
-# -Network-Configuration-and-Troubleshooting
-Here’s a personalized README for your **Network Configuration and Troubleshooting** project:
-
----
-
 # Network Configuration and Troubleshooting
 
 ## Project 1: Network Configuration and Troubleshooting
@@ -13,7 +8,11 @@ In this project, I learned how to configure and troubleshoot network settings in
 ---
 
 ### Steps
-![Uploading Screenshot (281).png…]()
+
+![Screenshot (281)](https://github.com/user-attachments/assets/56d139bd-cdc3-422c-bdd6-0f2bea91e9ed)
+![Screenshot (285)](https://github.com/user-attachments/assets/883ed82f-5e4a-497e-bdb2-e4e3f47345e9)
+
+
 
 #### 1. **Set a Static IP Address**
 The first step was to configure a static IP address for the system. I edited the network configuration file as follows:
@@ -43,6 +42,11 @@ sudo systemctl restart networking
 
 However, I encountered an issue because the `networking.service` unit was not found. This led me to check the system for netplan configurations.
 
+![Screenshot (288)](https://github.com/user-attachments/assets/18fe434b-3b1a-43a2-9791-c6282d65af4f)
+![Screenshot (288)](https://github.com/user-attachments/assets/c46fe41d-1fc9-4811-9576-c9e2dda1ac93)
+![Screenshot (290)](https://github.com/user-attachments/assets/2a05bfd7-443b-4074-8a00-d9b7cba86992)
+![Screenshot (291)](https://github.com/user-attachments/assets/a8488228-8da4-4aae-b612-95f459700a20)
+
 #### 3. **Troubleshooting Network Configuration**
 Upon reviewing the network configuration files, I found that my system was using **netplan** instead of the older `interfaces` file.
 
@@ -62,6 +66,7 @@ Upon reviewing the network configuration files, I found that my system was using
   ```bash
   sudo netplan apply
   ```
+![Screenshot (291)](https://github.com/user-attachments/assets/05a20f9f-508e-428e-9951-52cc147160ef)
 
 #### 4. **Verify the IP Address**
 To verify the configuration, I used the following command to check the IP address of the interface `enX0`:
@@ -83,6 +88,9 @@ sudo ip route del 172.31.80.1 dev enX0
 ```
 
 I updated the routes to reflect the correct configuration, ensuring no conflicts between interfaces.
+![Screenshot (291)](https://github.com/user-attachments/assets/8cf9640f-1c04-4f6b-bdd1-ec345a439a0e)
+![Screenshot (292)](https://github.com/user-attachments/assets/c77f1d4c-1a34-4fb0-a2ce-8380b0d9aec2)
+![Screenshot (293)](https://github.com/user-attachments/assets/b6f41a2a-0479-47d0-9c53-c58ed1f2e399)
 
 #### 6. **Testing Network Connectivity**
 To verify network connectivity, I performed two tests:
